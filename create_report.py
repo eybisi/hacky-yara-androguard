@@ -7,12 +7,12 @@ import os
 def create_report(f):
     if not os.path.isfile(f):
         filename = os.getcwd()+"/"+sys.argv[1]+"/"+f
-    print (filename)
     try:
         a = apk.APK(filename)
     except:
         print("We have a badboy here: not apk {}".format(filename))
         return
+    print(f)
     d = {}
     d["app_name"] = a.get_app_name()
     d["package_name"] = a.get_package()
@@ -31,11 +31,19 @@ def create_report(f):
     f = open(os.getcwd()+'/reports/'+f+'-report.json','w')
     f.write(jaysin)
     f.close()
+
+if len(sys.argv) != 2:
+    print("Usage : python scan.py report_folder")
+    exit()
+
 if os.path.isdir(sys.argv[1]):
     files = [f for f in os.listdir(sys.argv[1])]
-    os.mkdir("reports")
+    if not os.path.isdir(os.getcwd()+"/reports"):
+        os.mkdir("reports")
+    print("Generating reports..")
     for f in files:
         create_report(f)
 else:
     create_report(sys.argv[1])
+
 
