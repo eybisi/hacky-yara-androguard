@@ -28,5 +28,5 @@ yarame.py takes 3 parameter: report folder, apk folder and yara rule
 
 Since androguard module doesn't work on latest yara python library I used os.system, if you can run it with yara library feel free to pr.
 
-[![asciicast](https://asciinema.org/a/nJ1Ag8qCWsfopJsXpi7ON4agh.svg)]
+[![asciicast](https://asciinema.org/a/nJ1Ag8qCWsfopJsXpi7ON4agh.svg)](https://asciinema.org/a/nJ1Ag8qCWsfopJsXpi7ON4agh)
 
