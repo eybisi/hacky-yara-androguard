@@ -22,7 +22,7 @@ There is 2 python script;
 
 Script will create reports folder and put reports there.
 
-create_report.py takes 3 parameter: report folder, apk folder and yara rule. In yara rules you can use androguard module. You can also use other yara modules if you want to.
+scan.py takes 3 parameter: report folder, apk folder and yara rule. In yara rules you can use androguard module. You can also use other yara modules if you want to.
 
 `scan.py reports apk dropper.yar`
 
